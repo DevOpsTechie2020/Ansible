@@ -1,0 +1,23 @@
+- name: Install git and clone
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: Install git
+    ansible.builtin.package:
+    name: git
+    state: present
+  - name: clone git
+    ansible.builtin.git:
+     repo: https://github.com/DevOpsTechie2020/Ansible.git
+     dest: /home 
+     version: main
+     clone: yes
+     update: yes
+- name: install mysql
+  hosts: backend
+  become: yes
+  tasks:
+  - name: Install mysql
+    ansible.builtin.package:
+    name: mysql
+    state: present
