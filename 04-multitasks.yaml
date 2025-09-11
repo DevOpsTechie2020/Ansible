@@ -4,7 +4,7 @@
   tasks:
     - name: Install Git
       ansible.builtin.package:
-        name: Git
+        name: git
         state: present
     - name: clone Git
       ansible.builtin.git:
