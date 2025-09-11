@@ -9,7 +9,7 @@
     - name: clone Git
       ansible.builtin.git:
         repo: https://github.com/DevOpsTechie2020/Ansible.git
-        dest: /home 
+        dest: /home/ec2-user/AnsibleRepo
         version: main
         clone: yes
         update: yes
